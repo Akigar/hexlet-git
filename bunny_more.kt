@@ -17,16 +17,16 @@ fun main() {
     for (i in 2..years_deth) {
         counts += 0
     }
-    for (i in 1..mounth){
+    for (i in 2..mounth){
         for (j in 1..(years_deth - 1)){
             dop_num += counts[j]
         }
-        for (j in years_deth - 1..1){
-            println(j)
-            counts[j] = counts[j - 1]
+        for (j in 1..(years_deth - 1)){
+            counts[years_deth - j] = counts[years_deth - j - 1]
         }
 
         counts[0] = dop_num
+        dop_num = 0
     }
     for (i in 0..(years_deth - 1)) {
         count += counts[i]
