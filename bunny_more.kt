@@ -17,7 +17,6 @@ fun main() {
     for (i in 2..years_deth) {
         counts += 0
     }
-    println(counts.joinToString())
     for (i in 1..mounth){
         for (j in 1..(years_deth - 1)){
             dop_num += counts[j]
@@ -27,7 +26,6 @@ fun main() {
             counts[j] = counts[j - 1]
         }
 
-        println(counts.joinToString())
         counts[0] = dop_num
     }
     for (i in 0..(years_deth - 1)) {
